@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366F1; /* Trustworth Indigo */
+  --color-secondary: #10B981; /* Impactful Emerald */
+  --color-accent: #F59E0B; /* Urgent Amber */
+  --color-background: #0F172A; /* Deep Space Slate */
+  --color-surface: #1E293B; /* Card Slate */
+  --color-text: #F8FAFC; /* Crisp Slate White */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #6366F1, #10B981);
+  }
+  
+  .glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .hero-glow {
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  }
+}
